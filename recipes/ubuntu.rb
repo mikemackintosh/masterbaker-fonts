@@ -6,7 +6,7 @@ unless ::File.exists?("/Library/Fonts/Ubuntu-R.ttf")
 
   execute "unzip Ubuntu Font" do
     command "unzip #{Chef::Config[:file_cache_path]}/ubuntu-font-family-0.80.zip"
-    not_if { File.directory?("#{Chef::Config[:file_cache_path]}/ubuntu-font-family-0.80/") }
+    not_if { File.exists?("#{Chef::Config[:file_cache_path]}/ubuntu-font-family-0.80/") }
   end
 
   execute "copy Ubuntu Font" do
