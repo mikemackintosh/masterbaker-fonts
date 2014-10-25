@@ -10,7 +10,7 @@ unless ::File.exists?("/Library/Fonts/Ubuntu-R.ttf")
   end
 
   execute "copy Ubuntu Font" do
-    command "copy #{Chef::Config[:file_cache_path]}/ubuntu-font-family-0.80/*.ttf /Library/Fonts/"
+    command "cp #{Chef::Config[:file_cache_path]}/ubuntu-font-family-0.80/*.ttf /Library/Fonts/"
     not_if { File.exists?("/Library/Fonts/Ubuntu-R.ttf") }
   end
 end
