@@ -1,7 +1,7 @@
 unless ::File.exists?("/Library/Fonts/Ubuntu-R.ttf")
   remote_file "#{Chef::Config[:file_cache_path]}/ubuntu-font-family-0.80.zip" do
     source 'http://font.ubuntu.com/download/ubuntu-font-family-0.80.zip'
-    checksum '88276ba9d38d75b33a9640efa15cd80979cb21e2'
+    checksum '107170099bbc3beae8602b97a5c423525d363106c3c24f787d43e09811298e4c'
   end
 
   execute "unzip Ubuntu Font" do
